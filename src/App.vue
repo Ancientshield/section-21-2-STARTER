@@ -1,25 +1,36 @@
 <template>
-  <div id="app">
-    <div class="scrollPosition"></div>
-  </div>
+	<div id="app">
+		<div class="scrollPosition">{{ offset }}</div>
+	</div>
 </template>
 
 <script>
-export default {
-  name: "App",
-};
+	import mixin from './mixin.js';
+
+	export default {
+		name: 'App',
+		mixins: [mixin],
+		data() {
+			return {
+				offset: 0,
+			};
+		},
+		mounted() {
+			console.log('App mounted lifecycle function');
+		},
+	};
 </script>
 
 <style>
-#app {
-  width: 100%;
-  height: 3000px;
-  position: relative;
-}
+	#app {
+		width: 100%;
+		height: 3000px;
+		position: absolute;
+	}
 
-.scrollPosition {
-  position: fix;
-  left: 10px;
-  right: 10px;
-}
+	.scrollPosition {
+		position: fix;
+		left: 10px;
+		right: 10px;
+	}
 </style>
