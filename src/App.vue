@@ -24,12 +24,13 @@
 <style>
 	#app {
 		width: 100%;
-		height: 3000px;
+		height: 50000px;
 		position: absolute;
 	}
 
 	.scrollPosition {
-		position: fix;
+		position: fixed;
+		overflow-y: scroll;
 		left: 10px;
 		right: 10px;
 	}
